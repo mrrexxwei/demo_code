@@ -191,5 +191,39 @@ function encrypt(s, key) {
 }
 
 
+/*------------------------------------------------------------------------------------------------
+|    Dec 3, 2025
+|    Coding Exercise: Reverse String
+|-------------------------------------------------------------------------------------------------
+|   Reverse a String
+|   Write a function that takes a string as 
+|   input and returns it reversed.
+|   For example, "hello" becomes "olleh". 
+|   Please build it from scratch.
+-------------------------------------------------------------------------------------------------*/
+
+function reverseString1(s) {
+
+    // 1 declare return var
+    let res = "";
+    for (let i = s.length - 1; i === 0; i--) {
+        res = res + s[i];
+    }
+    return res
+}
+
+function reverseString2(s) {
+    // 1 declare return var
+    let res = [];
+    // 2 convert the string into array
+    let a = s.split("");  // a is an array
+    // 3 loop over the array
+    for (let i = 0; i < a.length; i++) {
+        // res.push(a[i])  
+        res.unshift(a[i]);
+    }
+    // 4 retun the result
+    return res.join("")
+}
 
 
